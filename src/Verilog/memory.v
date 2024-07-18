@@ -1,4 +1,4 @@
-module memory #(parameter M = 10, parameter N = 8) (
+module memory #(parameter M = 162, parameter N = 8) (
     input wire [N-1:0] data_in,
     input wire [$clog2(M)-1:0] addr,
     input wire write_enable,
@@ -18,6 +18,7 @@ module memory #(parameter M = 10, parameter N = 8) (
             for (i = 0; i < M; i = i + 1) begin
                 mem[i] <= 0; 
             end
+             // mem[0] <= 0; 
         end else if (write_enable) begin
             mem[addr] <= data_in;  // Write data to memory
         end
@@ -34,3 +35,17 @@ module memory #(parameter M = 10, parameter N = 8) (
     end
 
 endmodule
+
+
+
+
+
+
+
+
+
+
+
+
+
+

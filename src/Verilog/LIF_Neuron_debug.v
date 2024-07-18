@@ -1,6 +1,6 @@
 module LIF_Neuron_debug #(
     parameter M = 8,                   // Number of input spikes and weights
-    parameter Nbits = 4		      // Nbits weight precision and membrane potential
+    parameter Nbits = 2		      // Nbits weight precision and membrane potential
 )(
     input wire clk,                        // Clock signal
     input wire reset,                      // Asynchronous reset, active high
